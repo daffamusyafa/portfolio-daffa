@@ -1,6 +1,8 @@
 import React from "react";
-import { MapPin, Calendar, Award, Briefcase, GraduationCap } from "lucide-react";
+import { MapPin, Calendar, Briefcase, GraduationCap } from "lucide-react";
 import SkillSection from "@/components/SkillSection";
+import Image from "next/image";
+import TechBadge from "@/components/TechBadge";
 
 const AboutPage = () => {
   const personalInfo = {
@@ -23,33 +25,39 @@ const AboutPage = () => {
         "Built cross-platform mobile apps using React Native with clean UI and smooth navigation",
         "Deployed web and backend services using Docker for consistent and scalable environments",
         "Handled end-to-end development: UI, backend logic, API, database, and deployment",
-        "Implemented reusable components and clean code structure using TypeScript and best practices"
+        "Implemented reusable components and clean code structure using TypeScript and best practices",
       ],
       projects: [
         {
-          name: "E-commerce Platform",
-          description: "Built comprehensive e-commerce solution serving 10K+ users",
-          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop",
-          tech: [
-            { name: "React", icon: "⚛️" },
-            { name: "Node.js", icon: "🟢" },
-            { name: "PostgreSQL", icon: "🐘" },
-            { name: "AWS", icon: "☁️" },
-          ],
+          name: "Kurirlink",
+          description:
+            "A web-based dashboard for shipping agents to manage package delivery operations. Includes features like transaction management, membership system for agents, shipment creation, and admin dashboard for managing agents and users.",
+          image: "/img/kurirlink.jpg",
+          tech: ["Nextjs", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js", "Hono", "Shadcn", "Docker"],
         },
         {
-          name: "Admin Dashboard",
-          description: "Developed real-time analytics dashboard with complex data visualization",
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop",
-          tech: [
-            { name: "Vue.js", icon: "💚" },
-            { name: "D3.js", icon: "📊" },
-            { name: "Express", icon: "🚀" },
-            { name: "MongoDB", icon: "🍃" },
-          ],
+          name: "Juragan Paket",
+          description:
+            "A web-based dashboard for managing shipping operations and package transactions. Designed for internal use by agents to handle deliveries efficiently with features like label printing, transaction tracking, and role-based access.",
+          image: "/img/juraganpaket.jpg",
+          tech: ["Nextjs", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js", "Hono", "Shadcn", "Docker"],
+        },
+        {
+          name: "Whatsapp Bot Seller",
+          description:
+            "A dashboard for sellers integrated with a custom WhatsApp bot, allowing them to register, verify their identity, and track transaction history made through the bot. Built to support small businesses automate their order processing.",
+          image: "/img/botseller.jpg",
+          tech: ["Nextjs", "TypeScript", "Tailwind CSS", "Shadcn", "Docker"],
+        },
+        {
+          name: "Pakeetid",
+          description:
+            "A public-facing landing page for individuals who want to send packages without needing to log in. Designed for ease of use, the site offers accessible information about shipping services, courier comparison, and delivery estimates.",
+          image: "/img/pakeetid.jpg",
+          tech: ["Nextjs", "TypeScript", "Tailwind CSS", "Appwrite", "Shadcn", "Docker"],
         },
       ],
-    }
+    },
   ];
 
   const education = [
@@ -78,19 +86,6 @@ const AboutPage = () => {
       achievements: ["Graduated from TKJ (Teknik Komputer dan Jaringan)", "Learned basic networking, hardware, and troubleshooting", "Completed internship in IT support and administration"],
     },
   ];
-
-  const skills = {
-    technical: [
-      { name: "JavaScript", icon: "🟨" },
-      { name: "React", icon: "⚛️" },
-      { name: "Node.js", icon: "🟢" },
-      { name: "TypeScript", icon: "📘" },
-      { name: "Python", icon: "🐍" },
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "AWS", icon: "☁️" },
-      { name: "Docker", icon: "🐳" },
-    ],
-  };
 
   return (
     <div className="min-h-screen bg-gray-50 font-poppins py-4">
@@ -161,17 +156,14 @@ const AboutPage = () => {
                       <h4 className="font-medium text-gray-900 mb-3">Projects:</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {exp.projects.map((project, i) => (
-                          <div key={i} className="bg-gray-50 rounded-lg overflow-hidden">
-                            <img src={project.image} alt={project.name} className="w-full h-32 object-cover" />
+                          <div key={i} className="bg-gray-50 border border-gray-100 rounded-lg overflow-hidden">
+                            <Image width={600} height={500} src={project.image} alt={project.name} className="object-contain" />
                             <div className="p-4">
                               <h5 className="font-medium text-gray-900 mb-2">{project.name}</h5>
                               <p className="text-sm text-gray-600 mb-3">{project.description}</p>
                               <div className="flex flex-wrap gap-2">
                                 {project.tech.map((tech, j) => (
-                                  <span key={j} className="inline-flex items-center gap-1 px-2 py-1 bg-white text-xs text-gray-700 rounded-md">
-                                    <span>{tech.icon}</span>
-                                    {tech.name}
-                                  </span>
+                                  <TechBadge key={j} tech={tech} />
                                 ))}
                               </div>
                             </div>
@@ -206,12 +198,6 @@ const AboutPage = () => {
                     <MapPin size={14} />
                     {edu.location}
                   </span>
-                  {edu.gpa && (
-                    <span className="flex items-center gap-1">
-                      <Award size={14} />
-                      GPA: {edu.gpa}
-                    </span>
-                  )}
                 </div>
                 <ul className="space-y-1">
                   {edu.achievements.map((achievement, i) => (

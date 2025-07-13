@@ -42,7 +42,7 @@ export default function Sidebar() {
           </button>
           <div className="flex items-center justify-center mb-3">
             <div className="relative">
-              <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 p-0.5">
+              <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 p-0.5">
                 <Image src="/img/myfoto.jpg" alt="Profile" className="w-full h-full rounded-full object-cover" width={100} height={100} />
               </div>
             </div>
@@ -100,13 +100,6 @@ export default function Sidebar() {
               })}
             </div>
           </div>
-
-          {/* <div className="text-center">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg transform hover:scale-[1.02] flex items-center justify-center gap-2">
-              <span>Download Resume</span>
-              <ExternalLink className="w-4 h-4" />
-            </button>
-          </div> */}
 
           <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-4">© 2025 RynDev</p>
         </div>

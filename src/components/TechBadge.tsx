@@ -1,4 +1,4 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiJavascript, SiNodedotjs, SiMongodb, SiExpress, SiCloudflare } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiJavascript, SiNodedotjs, SiMongodb, SiExpress, SiCloudflare, SiDocker, SiVercel } from "react-icons/si";
 import { IconType } from "react-icons";
 
 type TechBadgeProps = {
@@ -7,19 +7,21 @@ type TechBadgeProps = {
 
 const iconMap: Record<string, IconType> = {
   React: SiReact,
-  "Nextjs": SiNextdotjs,
+  Nextjs: SiNextdotjs,
   "Tailwind CSS": SiTailwindcss,
   TypeScript: SiTypescript,
   JavaScript: SiJavascript,
   "Node.js": SiNodedotjs,
   Express: SiExpress,
   MongoDB: SiMongodb,
-  Hono: SiCloudflare, 
+  Hono: SiCloudflare,
+  Docker: SiDocker,
+  Shadcn: SiVercel,
 };
 
 const colorMap: Record<string, string> = {
   React: "bg-blue-100 text-blue-800",
-  "Nextjs": "bg-black text-white",
+  Nextjs: "bg-black text-white",
   "Tailwind CSS": "bg-teal-100 text-teal-800",
   TypeScript: "bg-blue-200 text-blue-900",
   JavaScript: "bg-yellow-100 text-yellow-800",
@@ -28,6 +30,8 @@ const colorMap: Record<string, string> = {
   MongoDB: "bg-green-200 text-green-900",
   TanStack: "bg-pink-100 text-pink-800",
   Hono: "bg-orange-100 text-orange-800",
+  Docker: "bg-sky-100 text-sky-800",
+  Shadcn: "bg-neutral-200 text-black",
 };
 
 const TechBadge = ({ tech }: TechBadgeProps) => {
