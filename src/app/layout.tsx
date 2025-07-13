@@ -35,8 +35,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-white dark:bg-gray-900">
           <Sidebar />
 
-          {/* Main Content Area */}
-          <main className="ml-80 min-h-screen p-1 bg-white dark:bg-gray-900">
+          <main className="ml-80 min-h-screen p-2 bg-white dark:bg-gray-900">
             {children}
           </main>
         </div>

@@ -39,7 +39,7 @@ const TechBadge = ({ tech }: TechBadgeProps) => {
   const colorClass = colorMap[tech] || "bg-gray-100 text-gray-800";
 
   return (
-    <span className={`inline-flex items-center px-3 py-1 text-sm font-medium rounded-full ${colorClass}`}>
+    <span className={`inline-flex items-center px-3 py-1 text-[10px] font-medium rounded-full ${colorClass}`}>
       {Icon && <Icon className="w-4 h-4 mr-1" />}
       {tech}
     </span>

@@ -7,11 +7,11 @@ import { projects } from "@/data";
 const PortfolioPage = () => {
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 font-poppins">
+    <div className="min-h-screen py-10 font-poppins">
       <div className="mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Portfolio</h1>
-          <p className="text-lg text-gray-600">A collection of projects I&apos;ve worked on</p>
+          <h1 className="text-2xl font-bold text-gray-900">Portfolio</h1>
+          <p className="text-sm text-gray-600 ">A collection of projects I&apos;ve worked on</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -22,11 +22,9 @@ const PortfolioPage = () => {
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-700">{project.date}</div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{project.title}</h3>
-
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                <p className="text-gray-600 mb-4 text-xs leading-relaxed">{project.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
@@ -38,13 +36,13 @@ const PortfolioPage = () => {
 
                 <div className="flex gap-3 pt-4 border-t border-gray-100">
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-xs font-medium">
                       <Github size={16} />
                       Code
                     </a>
                   )}
                   {project.demoUrl && (
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-xs font-medium">
                       <ExternalLink size={16} />
                       Demo
                     </a>

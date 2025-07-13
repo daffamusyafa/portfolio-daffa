@@ -3,7 +3,7 @@ export   const projects = [
       id: 1,
       title: "Task Management App",
       description:
-        "Task Management App is a simple and responsive web application I built as part of an assignment, designed to help users manage their daily tasks efficiently. It allows users to create, update, complete, and delete tasks with ease.",
+        "A web app for managing daily tasks, allowing users to create, update, complete, and delete tasks with a simple interface.",
       image: "/img/task-management-project.png",
       techStack: ["Nextjs", "TypeScript", "Tailwind CSS"],
       githubUrl: "https://github.com/nrrarnn/task-management-application",
@@ -14,7 +14,7 @@ export   const projects = [
       id: 2,
       title: "Personal Finance - SaldaQ",
       description:
-        "Personal Finance Tracker is a web application built to help users record and organize their financial activities, specifically income and expenses. The app allows users to assign categories to each transaction and visualize their financial data for better spending awareness.",
+        "Personal Finance Tracker is a web app that helps users manage income and expenses by categorizing transactions and visualizing spending data.",
       image: "/img/saldaq-project.png",
       techStack: ["React", "TypeScript", "Tailwind CSS", "Express", "MongoDB"],
       githubUrl: "https://github.com/nrrarnn/personal-finance-frontend",
@@ -44,7 +44,7 @@ export   const projects = [
     {
       id: 5,
       title: "Enigma Laundry",
-      description: "Enigma Laundry is a CRUD-based application designed to efficiently manage laundry services. It allows users to create, read, update, and delete records related to laundry orders",
+      description: "A CRUD-based web app for managing laundry orders, allowing users to create, update, and track service records efficiently. ",
       image: "/img/enigma-laundry-project.png",
       techStack: ["React", "JavaScript", "Tailwind CSS"],
       githubUrl: "https://github.com/nrrarnn/duriat-food",

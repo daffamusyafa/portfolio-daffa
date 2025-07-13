@@ -136,7 +136,7 @@ const ServiceSection = () => {
         </div>
         <div className='py-20 flex justify-center'>
           <Button className="px-8 py-6 font-poppins tracking-wide">
-            <Link href="/porfolio">Explore My Works <ArrowRight /></Link>
+            <Link href="/porfolio" className='flex items-center gap-2'>Explore My Works <ArrowRight /></Link>
           </Button>
         </div>
       </div>
