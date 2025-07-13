@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Home, FolderOpen, MessageSquare, Play, Moon, Sun, Github, Linkedin, Twitter, Instagram, Mail, ExternalLink } from "lucide-react";
+import { Home, FolderOpen,Play, Moon, Sun, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface NavigationItem {
   id: string;
@@ -12,10 +13,9 @@ interface NavigationItem {
 }
 
 const navigationItems: NavigationItem[] = [
-  { id: "introduction", label: "Home", icon: Home },
-  { id: "portfolio", label: "Services", icon: FolderOpen, badge: 12 },
-  { id: "testimonials", label: "Portfolio", icon: MessageSquare, badge: 8 },
-  { id: "videos", label: "About Me", icon: Play, badge: 5 },
+  { id: "", label: "Home", icon: Home },
+  { id: "portfolio", label: "Portfolio", icon: FolderOpen, badge: 8 },
+  { id: "about", label: "About Me", icon: Play, badge: 5 },
 ];
 
 const socialLinks = [
@@ -30,9 +30,11 @@ export default function Sidebar() {
   const [activeItem, setActiveItem] = useState("introduction");
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const router = useRouter();
+
   return (
     <div className={`${isDarkMode ? "dark" : ""}`}>
-      <aside className="fixed left-0 top-0 h-screen w-72 bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 flex flex-col transition-all duration-300 ease-in-out shadow-xl shadow-slate-500/10">
+      <aside className="fixed left-0 top-0 h-screen w-72 font-poppins bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 flex flex-col transition-all duration-300 ease-in-out shadow-xl shadow-slate-500/10">
         {/* Profile Section */}
         <div className="p-4 border-b border-gray-100 dark:border-gray-800">
           <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 group">
@@ -61,7 +63,10 @@ export default function Sidebar() {
             return (
               <button
                 key={item.id}
-                onClick={() => setActiveItem(item.id)}
+                onClick={() => {
+                  setActiveItem(item.id);
+                  router.push(`/${item.id}`);
+                }}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 group relative overflow-hidden ${
                   isActive ? "bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 text-blue-700 dark:text-blue-400 shadow-sm" : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                 }`}
@@ -69,12 +74,12 @@ export default function Sidebar() {
                 {isActive && <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-600 rounded-r-full"></div>}
 
                 <IconComponent
-                  className={`w-5 h-5 transition-all duration-200 ${
+                  className={`w-5 h-5 transition-all duration-200  ${
                     isActive ? "text-blue-600 dark:text-blue-400 scale-110" : "text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 group-hover:scale-105"
                   }`}
                 />
 
-                <span className={`font-medium text-sm transition-all duration-200 ${isActive ? "text-blue-700 dark:text-blue-400" : ""}`}>{item.label}</span>
+                <span className={`font-medium  tracking-wide text-sm transition-all duration-200 ${isActive ? "text-blue-700 dark:text-blue-400" : ""}`}>{item.label}</span>
               </button>
             );
           })}

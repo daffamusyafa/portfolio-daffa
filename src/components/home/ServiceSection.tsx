@@ -1,10 +1,11 @@
 import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { CheckCircle, Globe, Search, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Globe, Search, Shield, Sparkles } from 'lucide-react';
+import { Button } from '../ui/button';
 
 const ServiceSection = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="pt-20 pb-6 font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Solutions for Your Success</h2>
@@ -131,6 +132,11 @@ const ServiceSection = () => {
               </ul>
             </CardContent>
           </Card>
+        </div>
+        <div className='py-20 flex justify-center'>
+          <Button className="px-8 py-6 font-poppins tracking-wide">
+            Explore My Works <ArrowRight />
+          </Button>
         </div>
       </div>
     </section>
