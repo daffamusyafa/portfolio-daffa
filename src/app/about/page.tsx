@@ -1,5 +1,6 @@
 import React from "react";
-import { MapPin, Calendar, Award, Code, Briefcase, GraduationCap } from "lucide-react";
+import { MapPin, Calendar, Award, Briefcase, GraduationCap } from "lucide-react";
+import SkillSection from "@/components/SkillSection";
 
 const AboutPage = () => {
   const personalInfo = {
@@ -226,25 +227,7 @@ const AboutPage = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <Code className="text-blue-600" size={24} />
-            Skills
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Technical Skills */}
-            <div>
-              <div className="grid grid-cols-2 gap-3">
-                {skills.technical.map((skill, i) => (
-                  <div key={i} className="bg-gray-50 rounded-lg p-3 flex items-center gap-2">
-                    <span className="text-lg">{skill.icon}</span>
-                    <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <SkillSection />
       </div>
     </div>
   );
