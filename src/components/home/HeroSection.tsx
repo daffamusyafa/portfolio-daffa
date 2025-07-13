@@ -87,7 +87,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <div className={`transition-all duration-1000 delay-700 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-            <p className="text-lg md:text-xl tracking-wide text-gray-700 dark:text-gray-400 font-light max-w-3xl mx-auto leading-snug backdrop-blur-sm">
+            <p className="text-lg md:text-md tracking-wide text-gray-700 dark:text-gray-400 font-light max-w-3xl mx-auto leading-snug backdrop-blur-sm">
               I create custom websites that are easy to use, look professional, and help your business grow by building trust with your customers.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function HeroSection() {
           {/* Action Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 transition-all duration-1000 delay-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             <button className="group bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-200 text-white dark:text-gray-900 px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 backdrop-blur-sm">
-              <a href="https://wa.me/6281234567890?text=Hi%20I'm%20interested%20in%20a%20consultation">Get Free Consultation</a>
+              <a href="https://wa.me/6285703223464?text=Hi%20I'm%20interested%20in%20a%20consultation">Get Free Consultation</a>
             </button>
 
             <button className="group border-2 border-gray-400 dark:border-gray-600 text-gray-800 dark:text-gray-300 px-8 py-4 rounded-2xl font-semibold hover:border-gray-500 dark:hover:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-3 backdrop-blur-sm">

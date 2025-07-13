@@ -10,7 +10,7 @@ const PortfolioPage = () => {
     <div className="min-h-screen py-10 font-poppins">
       <div className="mx-auto">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Portfolio</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Portfolio</h1>
           <p className="text-sm text-gray-600 ">A collection of projects I&apos;ve worked on</p>
         </div>
 
