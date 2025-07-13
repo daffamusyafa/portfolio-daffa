@@ -33,7 +33,7 @@ const HandleClient = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">First, we need an idea...</h3>
-                  <p className="text-gray-600">I'll analyze your business requirements and create a detailed project plan</p>
+                  <p className="text-gray-600">I&apos;ll analyze your business requirements and create a detailed project plan</p>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@ const HandleClient = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Design & Development</h3>
-                  <p className="text-gray-600">I'll create the design and share it with you. Once validated, I'll develop your website and put it online!</p>
+                  <p className="text-gray-600">I&apos;ll create the design and share it with you. Once validated, I&apos;ll develop your website and put it online!</p>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ const HandleClient = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Launch & Support</h3>
-                  <p className="text-gray-600">Perfect! Your website is live and I'll provide ongoing support to ensure everything runs smoothly</p>
+                  <p className="text-gray-600">Perfect! Your website is live and I&apos;ll provide ongoing support to ensure everything runs smoothly</p>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ const HandleClient = () => {
             <div className="flex items-start space-x-4 mt-8 justify-end">
               <div className="flex-1 text-right">
                 <div className="bg-blue-600 text-white rounded-2xl rounded-tr-sm p-4 inline-block">
-                  <p className="font-medium">Alright, great! I'll handle everything professionally and deliver a website that exceeds your expectations.</p>
+                  <p className="font-medium">Alright, great! I&apos;ll handle everything professionally and deliver a website that exceeds your expectations.</p>
                 </div>
               </div>
               <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
