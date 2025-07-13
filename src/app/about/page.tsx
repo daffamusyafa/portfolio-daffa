@@ -1,15 +1,11 @@
 import React from "react";
 import { MapPin, Calendar, Award, Code, Briefcase, GraduationCap } from "lucide-react";
-import Image from "next/image";
 
 const AboutPage = () => {
-  // Sample data - replace with your actual information
   const personalInfo = {
     name: "Nur Arini",
     title: "Full Stack Developer",
     location: "Bandung, Indonesia",
-    email: "nurarini0302@email.com",
-    avatar: "/img/myfoto1.jpg",
     bio: "Passionate full stack developer with 1+ years of experience building scalable web applications. I love creating efficient, user-friendly solutions that solve real-world problems. Always eager to learn new technologies and contribute to innovative projects.",
   };
 
@@ -20,8 +16,14 @@ const AboutPage = () => {
       company: "Skye Digipreuneur School",
       location: "Bandung, Indonesia",
       duration: "Desc 2024 - Present",
-      description: "Leading frontend development team of 4 developers. Architected and implemented scalable React applications with modern tech stack.",
-      achievements: ["Improved application performance by 40% through code optimization", "Implemented CI/CD pipeline reducing deployment time by 60%", "Mentored junior developers and established coding standards"],
+      description: "Worked independently as a fullstack and mobile developer to build modern web and mobile applications using React, Next.js, Node.js, and Docker.",
+      achievements: [
+        "Developed fullstack applications with RESTful APIs, authentication, and database integration (MongoDB, AppWrite)",
+        "Built cross-platform mobile apps using React Native with clean UI and smooth navigation",
+        "Deployed web and backend services using Docker for consistent and scalable environments",
+        "Handled end-to-end development: UI, backend logic, API, database, and deployment",
+        "Implemented reusable components and clean code structure using TypeScript and best practices"
+      ],
       projects: [
         {
           name: "E-commerce Platform",
