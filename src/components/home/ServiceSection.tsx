@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { ArrowRight, CheckCircle, Globe, Search, Shield, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const ServiceSection = () => {
   return (
@@ -79,7 +80,7 @@ const ServiceSection = () => {
                 <Search className="w-6 h-6 text-purple-600 group-hover:text-white" />
               </div>
               <CardTitle className="text-xl">Web Optimization</CardTitle>
-              <CardDescription>Boost your website's performance, speed, and search engine rankings with expert optimization</CardDescription>
+              <CardDescription>Boost your website&apos;s performance, speed, and search engine rankings with expert optimization</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-gray-600">
@@ -135,7 +136,7 @@ const ServiceSection = () => {
         </div>
         <div className='py-20 flex justify-center'>
           <Button className="px-8 py-6 font-poppins tracking-wide">
-            Explore My Works <ArrowRight />
+            <Link href="/porfolio">Explore My Works <ArrowRight /></Link>
           </Button>
         </div>
       </div>

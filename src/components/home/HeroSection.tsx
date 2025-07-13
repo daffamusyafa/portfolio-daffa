@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -94,11 +95,11 @@ export default function HeroSection() {
           {/* Action Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 transition-all duration-1000 delay-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             <button className="group bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-200 text-white dark:text-gray-900 px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 backdrop-blur-sm">
-              <span>Get Free Consultation</span>
+              <a href="https://wa.me/6281234567890?text=Hi%20I'm%20interested%20in%20a%20consultation">Get Free Consultation</a>
             </button>
 
             <button className="group border-2 border-gray-400 dark:border-gray-600 text-gray-800 dark:text-gray-300 px-8 py-4 rounded-2xl font-semibold hover:border-gray-500 dark:hover:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-3 backdrop-blur-sm">
-              <span>See My Portfolio</span>
+              <Link href={'/portfolio'}>See My Portfolio</Link>
             </button>
           </div>
         </div>
