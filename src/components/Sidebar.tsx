@@ -19,11 +19,11 @@ const navigationItems: NavigationItem[] = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: Github, href: "https://github.com/nrrarnn", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/nur-arini", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/ryn_code", label: "Twitter" },
+  { icon: Instagram, href: "https://instagram.com/ryn_code", label: "Instagram" },
+  { icon: Mail, href: "mailto:nurarini0302@gmail.com", label: "Email" },
 ];
 
 export default function Sidebar() {
