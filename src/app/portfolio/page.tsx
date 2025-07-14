@@ -7,7 +7,7 @@ import { projects } from "@/data";
 const PortfolioPage = () => {
 
   return (
-    <div className="min-h-screen py-10 font-poppins">
+    <div className="min-h-screen py-4 sm:py-10 font-poppins px-3 sm:px-1 ">
       <div className="mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Portfolio</h1>

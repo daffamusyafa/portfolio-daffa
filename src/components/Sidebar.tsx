@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Home, FolderOpen, Play, Moon, Sun, Github, Linkedin, Twitter, Instagram, Mail, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useDarkMode } from "./DarkMode";
 
 interface NavigationItem {
   id: string;
@@ -28,8 +29,9 @@ const socialLinks = [
 
 export default function Sidebar() {
   const [activeItem, setActiveItem] = useState("introduction");
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
 
   const router = useRouter();
 
@@ -68,9 +70,12 @@ export default function Sidebar() {
       >
         {/* Profile Section - UI sama persis */}
         <div className="p-4 border-b border-gray-100 dark:border-gray-800">
-          <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 group">
-            {isDarkMode ? <Sun className="w-4 h-4 text-yellow-500 group-hover:rotate-12 transition-transform duration-200" /> : <Moon className="w-4 h-4 text-gray-600 group-hover:-rotate-12 transition-transform duration-200" />}
-          </button>
+          <div className="flex justify-end">
+            <button onClick={toggleDarkMode} className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 group">
+              {isDarkMode ? <Sun className="w-4 h-4 text-yellow-500 group-hover:rotate-12 transition-transform duration-200" /> : <Moon className="w-4 h-4 text-gray-600 group-hover:-rotate-12 transition-transform duration-200" />}
+            </button>
+          </div>
+
           <div className="flex items-center justify-center mb-3">
             <div className="relative">
               <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 p-0.5">
@@ -78,6 +83,7 @@ export default function Sidebar() {
               </div>
             </div>
           </div>
+
           <div className="space-y-1 flex flex-col items-center">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white">Nur Arini</h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">Full Stack Developer</p>

@@ -6,8 +6,8 @@ const HandleClient = () => {
     <section id="process" className="py-20 bg-white font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How I Handle Every Client</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">A transparent, collaborative process that ensures your project succeeds from idea to launch</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">How I Handle Every Client</h2>
+          <p className="text-md sm:text-lg text-gray-600 max-w-2xl mx-auto">A transparent, collaborative process that ensures your project succeeds from idea to launch</p>
         </div>
 
         <div className="max-w-4xl mx-auto">

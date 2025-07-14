@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import { DarkModeProvider } from "@/components/DarkMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}>
-        <div className="min-h-screen bg-white dark:bg-gray-900">
-          <Sidebar />
-
-          {/* Main content dengan responsive margin dan padding */}
-          <main
-            className="
+        <DarkModeProvider>
+          <div className="min-h-screen bg-white dark:bg-gray-900">
+            <Sidebar />
+            <main
+              className="
             ml-0 lg:ml-72 
             min-h-screen 
             p-2 lg:p-8
@@ -48,10 +48,11 @@ export default function RootLayout({
             duration-300 
             ease-in-out
           "
-          >
-            {children}
-          </main>
-        </div>
+            >
+              {children}
+            </main>
+          </div>
+        </DarkModeProvider>
       </body>
     </html>
   );
