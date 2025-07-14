@@ -10,7 +10,6 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen font-poppins py-6">
       <div className="mx-auto space-y-8">
-        {/* Hero Section */}
         <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
             <div className="flex-1 text-center md:text-left">
@@ -38,11 +37,7 @@ const AboutPage = () => {
               <div key={exp.id} className="relative">
                 {index !== experiences.length - 1 && <div className="absolute left-6 top-16 w-0.5 h-full bg-gray-200"></div>}
                 <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Briefcase className="text-blue-600" size={20} />
-                    </div>
-                  </div>
+              
                   <div className="flex-1">
                     <div className="mb-4">
                       <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
@@ -132,7 +127,6 @@ const AboutPage = () => {
           </div>
         </div>
 
-        {/* Skills Section */}
         <SkillSection />
       </div>
     </div>

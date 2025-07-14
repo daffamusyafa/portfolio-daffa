@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Home, FolderOpen,Play, Moon, Sun, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { Home, FolderOpen, Play, Moon, Sun, Github, Linkedin, Twitter, Instagram, Mail, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -29,13 +29,44 @@ const socialLinks = [
 export default function Sidebar() {
   const [activeItem, setActiveItem] = useState("introduction");
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const router = useRouter();
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleNavigation = (itemId: string) => {
+    setActiveItem(itemId);
+    router.push(`/${itemId}`);
+    // Auto close sidebar di mobile setelah navigation
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      setIsSidebarOpen(false);
+    }
+  };
+
   return (
     <div className={`${isDarkMode ? "dark" : ""}`}>
-      <aside className="fixed left-0 top-0 h-screen w-72 font-poppins bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 flex flex-col transition-all duration-300 ease-in-out shadow-xl shadow-slate-500/10">
-        {/* Profile Section */}
+      {/* Mobile Menu Button */}
+      <button onClick={toggleSidebar} className="fixed top-4 left-4 z-50 p-2 bg-gray-800 text-white rounded-lg lg:hidden">
+        {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Overlay untuk mobile */}
+      {isSidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={toggleSidebar} />}
+
+      {/* Sidebar - UI tetap sama, hanya tambah responsive logic */}
+      <aside
+        className={`
+        fixed left-0 top-0 h-screen w-72 font-poppins bg-white dark:bg-gray-900 
+        border-r border-gray-100 dark:border-gray-800 flex flex-col 
+        transition-all duration-300 ease-in-out shadow-xl shadow-slate-500/10 z-40
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+        lg:translate-x-0
+      `}
+      >
+        {/* Profile Section - UI sama persis */}
         <div className="p-4 border-b border-gray-100 dark:border-gray-800">
           <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 group">
             {isDarkMode ? <Sun className="w-4 h-4 text-yellow-500 group-hover:rotate-12 transition-transform duration-200" /> : <Moon className="w-4 h-4 text-gray-600 group-hover:-rotate-12 transition-transform duration-200" />}
@@ -54,7 +85,7 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation - UI sama persis, hanya ganti onClick */}
         <nav className="flex-1 p-4 space-y-1">
           {navigationItems.map((item) => {
             const IconComponent = item.icon;
@@ -63,10 +94,7 @@ export default function Sidebar() {
             return (
               <button
                 key={item.id}
-                onClick={() => {
-                  setActiveItem(item.id);
-                  router.push(`/${item.id}`);
-                }}
+                onClick={() => handleNavigation(item.id)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 group relative overflow-hidden ${
                   isActive ? "bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 text-blue-700 dark:text-blue-400 shadow-sm" : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                 }`}
@@ -85,7 +113,7 @@ export default function Sidebar() {
           })}
         </nav>
 
-        {/* Social Links */}
+        {/* Social Links - UI sama persis */}
         <div className="p-6 border-t border-gray-100 dark:border-gray-800">
           <div className="mb-4">
             <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Connect with me</p>
