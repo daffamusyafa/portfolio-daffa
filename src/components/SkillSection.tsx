@@ -2,7 +2,7 @@ import { Skill, skills } from "@/data/skills";
 
 const SkillSection = () => {
   return (
-    <section className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+    <section className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm p-8 border border-gray-100 dark:border-gray-800">
       <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Tech Stack</h2>
       {Object.entries(skills).map(([category, skillList]) => {
         const typedSkillList = skillList as Skill[];

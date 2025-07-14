@@ -40,8 +40,6 @@ export default function RootLayout({
               className="
             ml-0 lg:ml-72 
             min-h-screen 
-            p-2 lg:p-8
-            pt-16 lg:pt-2
             bg-white 
             dark:bg-gray-900
             transition-all 
