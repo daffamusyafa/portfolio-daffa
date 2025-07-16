@@ -9,8 +9,8 @@ const PortfolioPage = () => {
     <div className="min-h-screen py-4 sm:py-10 font-poppins px-3 sm:px-8 bg-white dark:bg-gray-900">
       <div className="mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Portfolio</h1>
-          <p className="text-sm text-gray-600 dark:text-gray-300">A collection of projects I&apos;ve worked on</p>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center dark:text-gray-100">Portfolio</h1>
+          <p className="text-sm sm:text-md text-gray-600 text-center dark:text-gray-300">A collection of projects I&apos;ve worked on</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

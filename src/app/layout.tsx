@@ -21,8 +21,35 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nur Arini - Portfolio",
-  description: "Full Stack Developer Portfolio - Nur Arini",
+  title: "Portofolio Nur Arini",
+  description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+  metadataBase: new URL("https://nrrarn.my.id"),
+  openGraph: {
+    title: "Nur Arini | Full Stack Developer",
+    description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+    url: "https://nrrarn.my.id",
+    siteName: "Nur Arini Portfolio",
+    images: [
+      {
+        url: "/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Nur Arini - Portofolio",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nur Arini | Full Stack Developer",
+    description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

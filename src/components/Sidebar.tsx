@@ -51,7 +51,7 @@ export default function Sidebar() {
   return (
     <div className={`${isDarkMode ? "dark" : ""}`}>
       {/* Mobile Menu Button */}
-      <button onClick={toggleSidebar} className="fixed top-4 left-4 z-50 p-2 bg-gray-800 text-white rounded-lg lg:hidden">
+      <button onClick={toggleSidebar} aria-label="Toggle Sidebar" className="fixed top-4 left-4 z-50 p-2 bg-gray-800 text-white rounded-lg lg:hidden">
         {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
@@ -87,7 +87,7 @@ export default function Sidebar() {
           <div className="space-y-1 flex flex-col items-center">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white">Nur Arini</h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">Full Stack Developer</p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 flex items-center gap-1">📍 Bandung, Indonesia</p>
+            <p className="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-1">📍 Bandung, Indonesia</p>
           </div>
         </div>
 
@@ -135,7 +135,7 @@ export default function Sidebar() {
             </div>
           </div>
 
-          <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-4">© 2025 RynDev</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">© 2025 RynDev</p>
         </div>
       </aside>
     </div>
