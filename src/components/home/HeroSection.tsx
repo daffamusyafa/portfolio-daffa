@@ -67,9 +67,9 @@ export default function HeroSection() {
           <div className="space-y-4">
             <div className={`transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
               <div className="flex items-center justify-center gap-8 flex-wrap">
-                <div className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                  <span className="text-gray-800 dark:text-gray-100 mr-4">Grow Your Business with a Professional</span>
-                  <span className={`bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent animate-pulse`}> Website</span>
+                <div className="flex flex-col font-bold text-3xl md:text-4xl lg:text-5xl">
+                  <span className="text-gray-800 dark:text-gray-100 mr-4">Building Scalable & Maintainable</span>
+                  <span className={` bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent animate-pulse`}> Web Applications</span>
                   <span className="text-gray-600 dark:text-gray-400"></span>
                 </div>
               </div>
@@ -78,25 +78,25 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <div className={`transition-all duration-1000 delay-700 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-            <p className="text-sm md:text-lg tracking-wide text-gray-700 dark:text-gray-300 font-light max-w-3xl mx-auto leading-snug backdrop-blur-sm">
-              I create custom websites that are easy to use, look professional, and help your business grow by building trust with your customers.
+            <p className="text-sm md:text-md tracking-wide text-gray-700 dark:text-gray-300 font-light max-w-3xl mx-auto leading-snug backdrop-blur-sm">
+              As a developer with a strong foundation in front-end technologies, I enjoy solving real-world problems through code, collaborating with teams, and continuously learning.
             </p>
           </div>
 
           {/* Action Buttons */}
           <div className={`flex flex-row gap-4 justify-center items-center pt-6 transition-all duration-1000 delay-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             <a
-              href="https://wa.me/6285703223464?text=Hi%20I'm%20interested%20in%20a%20consultation"
-              className="min-w-[48px] min-h-[48px] group bg-gradient-to-r from-gray-900 to-gray-800 dark:from-slate-100 dark:to-gray-100 text-white dark:text-slate-900 px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl dark:hover:shadow-slate-700/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 backdrop-blur-sm text-sm sm:text-md text-center"
+              href="mailto:nurarini0302@gmail.com"
+              className="min-w-[48px] min-h-[48px] group bg-gradient-to-r from-gray-900 to-gray-800 dark:from-slate-100 dark:to-gray-100 text-white dark:text-slate-900 px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl dark:hover:shadow-slate-700/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 backdrop-blur-sm text-xs sm:text-md text-center"
             >
-              Get Free Consultation
+              Get In Touch
             </a>
 
             <Link
               href="/portfolio"
-              className="min-w-[48px] min-h-[48px] group border-2 border-gray-400 dark:border-slate-500 text-gray-800 dark:text-gray-200 px-8 py-4 rounded-2xl font-semibold hover:border-gray-500 dark:hover:border-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800/60 transition-all duration-300 flex items-center gap-3 backdrop-blur-sm text-sm sm:text-md text-center"
+              className="min-w-[48px] min-h-[48px] group border-2 border-gray-400 dark:border-slate-500 text-gray-800 dark:text-gray-200 px-8 py-4 rounded-2xl font-semibold hover:border-gray-500 dark:hover:border-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800/60 transition-all duration-300 flex items-center gap-3 backdrop-blur-sm text-xs sm:text-md text-center"
             >
-              See My Portfolio
+              View My Work
             </Link>
           </div>
         </div>

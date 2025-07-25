@@ -10,12 +10,12 @@ const AboutPage = () => {
     <div className="min-h-screen font-poppins p-6 bg-white dark:bg-gray-900">
       <div className="mx-auto space-y-8">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm dark:shadow-gray-900/20 p-8 border border-gray-100 dark:border-gray-700">
-          <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-            <div className="flex-1 text-center md:text-left">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1 text-left">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">{personalInfo.name}</h1>
               <p className="text-xl text-blue-600 dark:text-blue-400 font-medium mb-4">{personalInfo.title}</p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-600 dark:text-gray-300 mb-6">
-                <div className="flex items-center gap-1">
+              <div className="flex flex-wrap gap-4 justify-start text-sm text-gray-600 dark:text-gray-300 mb-6">
+                <div className="flex items-start gap-1">
                   <MapPin size={16} />
                   {personalInfo.location}
                 </div>
@@ -100,14 +100,14 @@ const AboutPage = () => {
           <div className="space-y-6">
             {education.map((edu) => (
               <div key={edu.id} className="border-l-4 border-blue-200 dark:border-blue-600 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{edu.degree}</h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                <h3 className="text-md sm:text-lg font-semibold text-gray-900 dark:text-gray-100">{edu.degree}</h3>
+                <p className="text-blue-600 text-sm sm:text-md dark:text-blue-400 font-medium">{edu.school}</p>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300 mt-1 mb-3">
                   <span className="flex items-center gap-1">
                     <Calendar size={14} />
                     {edu.duration}
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex text-sm sm:text-md items-center gap-1">
                     <MapPin size={14} />
                     {edu.location}
                   </span>
