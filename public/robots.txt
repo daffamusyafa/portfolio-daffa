@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nrrarn.my.id
+
+# Sitemaps
+Sitemap: https://nrrarn.my.id/sitemap.xml
