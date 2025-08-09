@@ -22,7 +22,7 @@ const navigationItems: NavigationItem[] = [
 const socialLinks = [
   { icon: Github, href: "https://github.com/nrrarnn", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/nur-arini", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/ryn_code", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/ryncode_", label: "Twitter" },
   { icon: Instagram, href: "https://instagram.com/ryn_code", label: "Instagram" },
   { icon: Mail, href: "mailto:nurarini0302@gmail.com", label: "Email" },
 ];

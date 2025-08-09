@@ -75,7 +75,7 @@ const personalInfo = {
       degree: "Vocational High School Diploma – Computer and Network Engineering",
       school: "SMK Negeri 1 Majalaya",
       location: "Bandung, Indonesia",
-      duration: "2020 - 2023",
+      duration: "2021 - 2024",
       achievements: ["Graduated from TKJ (Teknik Komputer dan Jaringan)", "Learned basic networking, hardware, and troubleshooting", "Completed internship in IT support and administration"],
     },
   ];
