@@ -16,38 +16,57 @@ import {
   SiPostgresql,
   SiAppwrite,
   SiHono,
+  SiPrometheus,
+  SiGrafana,
+  SiGithubactions,
+  SiGitlab,
+  SiJenkins,
+  SiKubernetes,
+  SiGooglecloud,
+  SiAlibabacloud,
+  SiAnsible,
+  SiTerraform,
+  SiMysql,
+  SiNginx,
+  SiCloudflare,
 } from "react-icons/si";
 
 export type Skill = {
   name: string;
   icon:  React.ComponentType<React.SVGProps<SVGSVGElement>> | undefined;
-  color: string; 
+  color: string;
+  image?: string;
 };
 
 export const skills: Record<string, Skill[]> = {
-  frontend: [
-    { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
-    { name: "TypeScript", icon: SiTypescript, color: "#3178c6" },
-    { name: "React", icon: SiReact, color: "#61dafb" },
-    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06b6d4" },
-    { name: "Bootstrap", icon: SiBootstrap, color: "#7952b3" },
+  'Infrastructure Provisioning and Configuration Management': [
+    { name: "Ansible", icon: SiAnsible, color: "#EE0000" },
+    { name: "Terraform", icon: SiTerraform, color: "#6257E4" },
   ],
-  backend: [
-    { name: "Node.js", icon: SiNodedotjs, color: "#3c873a" },
-    { name: "Express", icon: SiExpress, color: "#000000" },
-    { name: "Hono", icon: SiHono, color: "#f3681c" },
-    { name: "PHP", icon: SiPhp, color: "#8892be" },
-    { name: "Laravel", icon: SiLaravel, color: "#ff2d20" },
-    { name: "Python", icon: SiPython, color: "#3776ab" },
-    { name: "Golang", icon: SiGo, color: "#00add8" },
+  'Cloud Infrastructure & Automation': [
+    { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
+    { name: "Alibaba Cloud", icon: SiAlibabacloud, color: "#FF6A00" },
   ],
-  database: [
+  'Continuous Integration & Continuous Deployment (CI/CD)': [
+    { name: "Jenkins", icon: SiJenkins, color: "#D24939" },
+    { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" }, // Contoh data
+    { name: "GitLab CI/CD", icon: SiGitlab, color: "#FCA121" },
+  ],
+  'Containerization & Orchestration': [
+    { name: "Docker", icon: SiDocker, color: "#2496ed" }, // <-- Ditambahkan di sini
+    { name: "Kubernetes", icon: SiKubernetes, color: "#326ce5" },
+  ],
+  'Monitoring': [
+  { name: "Prometheus", icon: SiPrometheus, color: "#E6522C" },
+  { name: "Grafana", icon: SiGrafana, color: "#F05A28" },
+  ],  
+  'Database': [
     { name: "MongoDB", icon: SiMongodb, color: "#47a248" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
-    { name: "Appwrite", icon: SiAppwrite, color: "#f02e65" },
+    { name: "MySQL", icon: SiMysql, color: "#4479A1" },
   ],
-  devops: [
-    { name: "Docker", icon: SiDocker, color: "#2496ed" },
+  'Webserver and Networking': [
+    { name: "Nginx", icon: SiNginx, color: "#009639" }, // <-- Ditambahkan
+    { name: "Cloudflare", icon: SiCloudflare, color: "#F38020" }, // <-- Ditambahkan
   ],
 };

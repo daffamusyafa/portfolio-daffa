@@ -21,20 +21,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portofolio Nur Arini",
-  description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+  title: "Portofolio Daffa Musyafa Maulana",
+  description: "Portofolio Daffa Musyafa Maulana - Devops Engineer From Bandung, Indonesia.",
   metadataBase: new URL("https://nrrarn.my.id"),
   openGraph: {
-    title: "Nur Arini | Full Stack Developer",
-    description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+    title: "Daffa Musyafa Maulana | Devops Engineer",
+    description: "Portofolio Daffa Musyafa Maulana - Devops Engineer From Bandung, Indonesia.",
     url: "https://nrrarn.my.id",
-    siteName: "Nur Arini Portfolio",
+    siteName: "Daffa Musyafa Maulana",
     images: [
       {
         url: "/og-image.png", 
         width: 1200,
         height: 630,
-        alt: "Nur Arini - Portofolio",
+        alt: "Daffa Musyafa Maulana - Portofolio",
       },
     ],
     locale: "id_ID",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nur Arini | Full Stack Developer",
-    description: "Portofolio Nur Arini - Freelance Web Developer dari Bandung, Indonesia.",
+    title: "Daffa Musyafa Maulana | Devops Engineer",
+    description: "Portofolio Daffa Musyafa Maulana - Devops Engineer From Bandung, Indonesia.",
     images: ["/og-image.png"],
   },
   robots: {

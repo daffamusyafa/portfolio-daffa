@@ -20,11 +20,11 @@ const navigationItems: NavigationItem[] = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/nrrarnn", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/nur-arini", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/ryncode_", label: "Twitter" },
-  { icon: Instagram, href: "https://instagram.com/ryn_code", label: "Instagram" },
-  { icon: Mail, href: "mailto:nurarini0302@gmail.com", label: "Email" },
+  { icon: Github, href: "https://github.com/daffamusyafa", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/daffa-musyafa-maulana/", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/daffamusyafa10", label: "Twitter" },
+  { icon: Instagram, href: "https://instagram.com/daffamusyafa10", label: "Instagram" },
+  { icon: Mail, href: "mailto:daffamusyafa10@gmail.com", label: "Email" },
 ];
 
 export default function Sidebar() {
@@ -85,8 +85,8 @@ export default function Sidebar() {
           </div>
 
           <div className="space-y-1 flex flex-col items-center">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Nur Arini</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">Full Stack Developer</p>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Daffa Musyafa Maulana</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">Devops Engineer</p>
             <p className="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-1">📍 Bandung, Indonesia</p>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Sidebar() {
             </div>
           </div>
 
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">© 2025 RynDev</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">© 2025 DafOps</p>
         </div>
       </aside>
     </div>

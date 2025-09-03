@@ -20,7 +20,7 @@ const AboutPage = () => {
                   {personalInfo.location}
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{personalInfo.bio}</p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">{personalInfo.bio}</p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const AboutPage = () => {
                             <Image width={600} height={500} src={project.image} alt={project.name} className="object-contain" />
                             <div className="p-4">
                               <h5 className="font-medium text-gray-900 dark:text-gray-100 mb-2">{project.name}</h5>
-                              <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">{project.description}</p>
+                              <p className="text-xs text-gray-600 dark:text-gray-300 mb-3 text-justify">{project.description}</p>
                               <div className="flex flex-wrap gap-2">
                                 {project.tech.map((tech, j) => (
                                   <TechBadge key={j} tech={tech} />
@@ -112,14 +112,17 @@ const AboutPage = () => {
                     {edu.location}
                   </span>
                 </div>
-                <ul className="space-y-1">
-                  {edu.achievements.map((achievement, i) => (
-                    <li key={i} className="text-xs text-gray-600 dark:text-gray-300 flex items-start gap-2">
-                      <span className="text-green-500 dark:text-green-400 mt-1">•</span>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+                {/* Perbaikan di sini: Tambahkan kondisional untuk mengecek keberadaan achievements */}
+                {edu.achievements && (
+                  <ul className="space-y-1">
+                    {edu.achievements.map((achievement, i) => (
+                      <li key={i} className="text-xs text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span className="text-green-500 dark:text-green-400 mt-1">•</span>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

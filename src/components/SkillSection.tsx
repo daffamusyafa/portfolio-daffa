@@ -15,7 +15,9 @@ const SkillSection = () => {
                 return (
                   <div key={index} className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3 flex items-center gap-3 hover:scale-[1.03] transition">
                     <Icon className="text-2xl" style={{ color: skill.color }} />
-                    <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
+                    <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                      {skill.name}
+                    </span>
                   </div>
                 );
               })}
