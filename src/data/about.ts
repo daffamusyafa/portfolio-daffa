@@ -26,8 +26,8 @@ const personalInfo = {
           name: "Bandshare",
           description:
             "The Bandshare app is an innovative platform that connects Partners (internet providers) with Users (internet recipients). Its main concept is to create a mutually beneficial internet sharing ecosystem.",
-          image: "/img/bandshare.jpg",
-          tech: ["Postgresql", "Nextjs", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js", "Hono", "Shadcn", "Docker"],
+          image: "/img/bandshare.png",
+          tech: ["postgresql", "Docker", "Kubernetes", "Ansible", "Terraform", "Grafana", "Prometheus", "GCP"],
         },
        ],
       },
